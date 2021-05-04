@@ -1,5 +1,5 @@
-resource "aws_instance" "ubuntu" {
-  ami           = "ami-090717c950a5c34d3"
+resource "aws_instance" "linux-instance" {
+  ami           = "ami-009b16df9fcaac611"
   instance_type = "t2.micro"
 
   subnet_id = aws_subnet.lesson9-subnet-public-3.id
@@ -9,7 +9,7 @@ resource "aws_instance" "ubuntu" {
   key_name = "example"
 
   tags = {
-    "Name" = "ubuntu"
+    "Name" = "linux-instance"
   }
 
   depends_on = [
